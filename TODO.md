@@ -1,0 +1,1 @@
+- [x] Edit src/app/about/page.tsx to add personal data content describing the person as brave, responsible, etc., with elaboration.
