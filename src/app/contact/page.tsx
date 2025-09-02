@@ -1,20 +1,51 @@
+import { MdMail } from "react-icons/md";
+import { FaGithub, FaInstagram } from "react-icons/fa";
+
 export default function ContactPage() {
-    return (
-      <section>
-        <h1 className="text-2xl font-bold">Contact Me</h1>
-        <p className="mt-2">Hubungi saya melalui email atau sosial media:</p>
-        <ul className="mt-4 space-y-2">
+  return (
+    <section className="min-h-screen flex items-center justify-center px-4">
+      <div className="max-w-lg w-full bg-white shadow-xl rounded-2xl p-8">
+        <h1 className="text-3xl font-bold text-center text-gray-800">
+          Contact Me
+        </h1>
+        <p className="mt-2 text-center text-gray-600">
+          Hubungi saya melalui email atau sosial media berikut:
+        </p>
+
+        <ul className="mt-6 space-y-4">
           <li>
-            📧 Email: <a href="alwanrafa08@gmail.com" className="text-blue-500">alwanrafa08@gmail.com</a>
+            <a
+              href="mailto:alwanrafa08@gmail.com"
+              className="flex items-center gap-3 p-4 rounded-xl border hover:bg-blue-50 transition"
+            >
+              <MdMail className="w-6 h-6 text-blue-500" />
+              <span className="text-gray-700">alwanrafa08@gmail.com</span>
+            </a>
           </li>
+
           <li>
-            🐙 GitHub: <a href="https://github.com/AlwaysSangar" target="_blank" className="text-blue-500">github.com/AlwaysSangar</a>
+            <a
+              href="https://github.com/AlwaysSangar"
+              target="_blank"
+              className="flex items-center gap-3 p-4 rounded-xl border hover:bg-gray-100 transition"
+            >
+              <FaGithub className="w-6 h-6 text-gray-800" />
+              <span className="text-gray-700">github.com/AlwaysSangar</span>
+            </a>
           </li>
+
           <li>
-            💼Instagram: <a href="https://www.instagram.com/reezzz08/" target="_blank" className="text-blue-500">instagram.com/reezzz08/</a>
+            <a
+              href="https://www.instagram.com/reezzz08/"
+              target="_blank"
+              className="flex items-center gap-3 p-4 rounded-xl border hover:bg-pink-50 transition"
+            >
+              <FaInstagram className="w-6 h-6 text-pink-500" />
+              <span className="text-gray-700">instagram.com/reezzz08</span>
+            </a>
           </li>
         </ul>
-      </section>
-    );
-  }
-  
+      </div>
+    </section>
+  );
+}

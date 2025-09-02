@@ -1,32 +1,66 @@
-import React from 'react';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { User, Star, Target, Heart } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-8">Tentang Saya</h1>
-      <div className="max-w-2xl mx-auto">
-        <p className="text-lg mb-4">
-          Halo! Saya Alwan Rafa, seorang pengembang perangkat lunak yang penuh semangat dan dedikasi.
-        </p>
-        <p className="text-lg mb-4">
-          Saya adalah orang yang berani menghadapi tantangan baru. Dalam karir saya, saya selalu siap untuk belajar hal-hal baru dan mengambil risiko yang diperlukan untuk mencapai tujuan.
-        </p>
-        <p className="text-lg mb-4">
-          Saya juga sangat bertanggung jawab. Saya percaya bahwa setiap tugas yang diberikan harus diselesaikan dengan baik dan tepat waktu. Integritas dan keandalan adalah nilai-nilai yang saya junjung tinggi.
-        </p>
-        <p className="text-lg mb-4">
-          Selain itu, saya adalah orang yang rajin dan tekun. Saya tidak mudah menyerah dalam menghadapi kesulitan, dan selalu berusaha memberikan yang terbaik dalam setiap proyek yang saya kerjakan.
-        </p>
-        <p className="text-lg mb-4">
-          Saya juga kreatif dan inovatif. Saya suka berpikir di luar kotak untuk menemukan solusi yang unik dan efektif bagi masalah-masalah yang kompleks.
-        </p>
-        <p className="text-lg mb-4">
-          Dalam kehidupan sehari-hari, saya adalah orang yang jujur, sopan, dan peduli terhadap orang lain. Saya percaya bahwa kerja tim yang baik adalah kunci kesuksesan, dan saya selalu siap untuk berkolaborasi dengan rekan-rekan saya.
-        </p>
-        <p className="text-lg mb-4">
-          Terima kasih telah mengunjungi halaman tentang saya. Jika Anda ingin tahu lebih lanjut tentang proyek-proyek saya atau memiliki pertanyaan, jangan ragu untuk menghubungi saya!
-        </p>
-      </div>
-    </div>
+    <section className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-16">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-3xl w-full bg-white shadow-xl rounded-2xl p-10"
+      >
+        {/* Header */}
+        <div className="text-center mb-10">
+          <div className="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg">
+            <Image
+              src="/alwanrafa.jpg"
+              alt="Foto profil Alwan Rafa - Pengembang perangkat lunak"
+              width={112}
+              height={112}
+              className="w-full h-full object-cover"
+              priority
+            />
+          </div>
+          <h1 className="text-4xl font-bold text-gray-800">Tentang Saya</h1>
+          <p className="text-gray-500 mt-2">Kenali saya lebih dekat 🚀</p>
+        </div>
+
+        {/* Content */}
+        <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+          <p>
+            Halo! Saya <span className="font-semibold">Alwan Rafa</span>, seorang
+            pengembang perangkat lunak yang penuh semangat dan dedikasi.
+          </p>
+          <p>
+            <Star className="inline w-5 h-5 text-yellow-500 mr-2" />
+            Saya berani menghadapi tantangan baru, selalu siap belajar, dan tidak
+            ragu mengambil risiko untuk mencapai tujuan.
+          </p>
+          <p>
+            <Target className="inline w-5 h-5 text-blue-500 mr-2" />
+            Tanggung jawab adalah hal utama bagi saya—setiap tugas harus selesai
+            tepat waktu dengan kualitas terbaik.
+          </p>
+          <p>
+            <Heart className="inline w-5 h-5 text-red-500 mr-2" />
+            Saya rajin, tekun, dan peduli terhadap orang lain. Kerja tim adalah
+            kunci kesuksesan, dan saya suka berkolaborasi dengan rekan kerja.
+          </p>
+          <p>
+            <User className="inline w-5 h-5 text-green-500 mr-2" />
+            Kreativitas dan inovasi adalah kekuatan saya—saya senang berpikir di
+            luar kotak untuk menemukan solusi unik.
+          </p>
+          <p>
+            Terima kasih sudah berkunjung 🙏. Jika ingin tahu lebih banyak tentang
+            proyek saya atau sekadar ngobrol, jangan ragu untuk menghubungi!
+          </p>
+        </div>
+      </motion.div>
+    </section>
   );
 }
