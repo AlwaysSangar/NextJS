@@ -42,7 +42,7 @@ export default function About() {
           </p>
           <p>
             <Target className="inline w-5 h-5 text-blue-500 mr-2" />
-            Tanggung jawab adalah hal utama bagi saya—setiap tugas harus selesai
+            Tanggung jawab adalah hal utama bagi saya, setiap tugas harus selesai
             tepat waktu dengan kualitas terbaik.
           </p>
           <p>
@@ -52,7 +52,7 @@ export default function About() {
           </p>
           <p>
             <User className="inline w-5 h-5 text-green-500 mr-2" />
-            Kreativitas dan inovasi adalah kekuatan saya—saya senang berpikir di
+            Kreativitas dan inovasi adalah kekuatan saya, saya senang berpikir di
             luar kotak untuk menemukan solusi unik.
           </p>
           <p>

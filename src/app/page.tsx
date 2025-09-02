@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function HomePage() {
   return (
@@ -21,14 +22,22 @@ export default function HomePage() {
         />
       </motion.div>
 
-      {/* Heading */}
+      {/* Heading dengan efek ketikan */}
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         className="text-4xl md:text-5xl font-extrabold text-gray-900"
       >
-        Haii, aku <span className="text-blue-600">Alwan</span> 👋
+        <Typewriter
+          words={["Haii, aku Alwayss!!! "]}
+          loop={false}
+          cursor
+          cursorStyle="|"
+          typeSpeed={80}
+          deleteSpeed={50}
+          delaySpeed={1500}
+        />
       </motion.h1>
 
       {/* Subheading */}
@@ -53,7 +62,6 @@ export default function HomePage() {
         <a
           href="/project"
           className="px-6 py-3 bg-blue-600 text-white font-medium rounded-xl shadow-md hover:bg-blue-700 transition"
-
         >
           View Projects
         </a>
