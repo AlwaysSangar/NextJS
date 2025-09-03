@@ -16,8 +16,8 @@ export default function HomePage() {
         <Image
           src="/alwansangar.jpg"
           alt="Profile Picture"
-          width={180}
-          height={180}
+          width={200}
+          height={200}
           className="rounded-full border-4 border-blue-500 shadow-xl"
         />
       </motion.div>

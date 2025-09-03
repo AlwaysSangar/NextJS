@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "../app/components/Navbar";
-import Footer from "../app/components/Footer"
+import Footer from "../app/components/Footer";
+import { ThemeProvider } from "../app/components/ThemeProvider";
 
 export const metadata = {
   title: "My Portfolio",
@@ -11,9 +12,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1 container mx-auto p-6">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex-1 container mx-auto p-6">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
